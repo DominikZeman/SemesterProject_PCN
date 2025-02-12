@@ -17,9 +17,12 @@ The first set of experiments conducted was testing the impact on the number of c
 
 ### Har
 The next set of experiments was utilizing the PCN architecture on a vision dataset that contained humanoid bodies. The human action recognition dataset contains images of people doing a set of 15 different human activities from royalty-free websites (Nagadia, 2022). These activities included things such as using a laptop, sleeping, laughing, clapping, eating, and others. The dataset contained 12,600 images which were split into an 80/10/10 train/test/validation split. The prospect of the PCN architecture in a continuation of this study would be to apply it to a robotics use where both vision and proprioception data are used in tandem. This could later be used in robotics in the real world by controlling a robot with PCN outputs.
+![circles graph](https://github.com/DominikZeman/SemesterProject_PCN/blob/main/pcn_data/HAR_experiment.png?raw=true)
+
 
 ### Hidden Layers
 The last experiment conducted was done to see whether there is a rapid decrease in performance if the size of the network is decreased. We wanted to see if a smaller network of 8-layers could potentially reach a similar performance as the 12-layer network. 
+![circles graph](https://github.com/DominikZeman/SemesterProject_PCN/blob/main/pcn_data/smaller_experiment.png?raw=true)
 
 ## Files
 In this section I describe all of the aditional code that I have wrote for this project. Closer explanation for files contained in this Git, which are necessary for running the code but not written by me, can be found here: https://github.com/libilab/PCN-with-Local-Recurrent-Processing?tab=readme-ov-file
