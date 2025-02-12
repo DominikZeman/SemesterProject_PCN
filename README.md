@@ -9,11 +9,36 @@ This approach to cognitive science has also informed the creation process of art
 In this study, we investigated the performance of predictive coding networks through a series of experiments designed to assess their efficiency, accuracy, and applicability to real-world tasks. We explored how varying the number of recurrent processing steps (circles) within the network affects model performance, determining an optimal threshold before diminishing returns set in. Additionally, we tested the PCN architecture on a human action recognition dataset to evaluate its ability to process complex visual information related to human movement, which has direct implications for robotics. Finally, we examined how reducing the network depth impacts stability and accuracy, shedding light on the trade-offs between model complexity and computational efficiency. These experiments provide insights into how PCNs function under different conditions and how they may be further optimized for future applications in artificial intelligence and robotics.
 
 ## Experiments
+The experiments conducted were threefold: testing how the amount of locar recursion affects model performance, setsing the model on a humanoid vision dataset, and seeing the impacts of model size on performance. Below are the results highlighted.
+
+### Circles
+
+### Har
+
+### Hidden Layers
+
 ## Files
+In this section I describe all of the aditional code that I have wrote for this project. 
+
 ### create_dataset
-#### agentspace.py
 #### create_dataset.py
-#### dataset.npy
-#### pyicubsim.py
+This file can be used to create a dataset of joint angles from the iCub robot correcsponding to images of the iCub robot itself. It uses the learningimitation framework on the iCub simulator by Andrej Lucny (https://github.com/andylucny/learningImitation) and the dataset of joint angles (icubposes).
+
 ### pcn_data
+#### convert_txt_to_csv.ipynb
+This file converts the text files from training of the PCN model to a csv file containing the loss and accuracy at each epoch, allowing for the graphing of the model performance.
+#### graphing.ipynb
+This jupyter notebook compiles and graphs all the data gathered during the experiments outlined above.
+
 ### PCN_training
+#### main_cifar_graph.py
+This code trains the model on the CIFAR-100 dataset and collects the data neatly in a csv file for future graphing.
+
+#### main_gbrma.py
+This segment of code was not utilised. It tries to train the model on sequential data from a dataset of proprioceptive hand gestures. The sequential nature of the data makes it difficult to adjust the model architecture to be able to run the training. This experiment was therefore not pursued.
+
+#### main_har.py
+This python file trains the PCN on the human action recognition dataset and gathers the training data in a csv file.
+
+#### split_dataset.py
+This file was used for splitting the HAR dataset into a train/test/validation split as it was part of a kaggle competition and the test data was not labled.
